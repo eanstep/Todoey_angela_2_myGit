@@ -32,9 +32,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title=" Todoey" id="LdY-Qa-6LP">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lcb-Te-2H6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jsd-kp-6Io">
                             <connections>
-                                <action selector="addButtonPressed:" destination="tiD-Fz-Lxx" id="jTh-pC-D3i"/>
+                                <action selector="addButtonPressed:" destination="tiD-Fz-Lxx" id="VC3-W5-aaL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
