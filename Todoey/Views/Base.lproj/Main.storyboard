@@ -32,15 +32,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title=" Todoey" id="LdY-Qa-6LP">
-<<<<<<< HEAD:Todoey/Views/Base.lproj/Main.storyboard
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lcb-Te-2H6">
-                            <connections>
-                                <action selector="addButtonPressed:" destination="tiD-Fz-Lxx" id="jTh-pC-D3i"/>
-=======
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jsd-kp-6Io">
                             <connections>
                                 <action selector="addButtonPressed:" destination="tiD-Fz-Lxx" id="VC3-W5-aaL"/>
->>>>>>> br2:Todoey/Base.lproj/Main.storyboard
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
-		C37FCE8C277270AE006B5C90 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FCE8B277270AE006B5C90 /* Item.swift */; };
-=======
 		C3A5C0D7278EF08100F93971 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5C0D6278EF08100F93971 /* Item.swift */; };
->>>>>>> br2
 		EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4F9239524DB00FB933B /* AppDelegate.swift */; };
 		EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */; };
 		EB2BE501239524DB00FB933B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2BE4FF239524DB00FB933B /* Main.storyboard */; };
@@ -20,11 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-		C37FCE8B277270AE006B5C90 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-=======
 		C3A5C0D6278EF08100F93971 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
->>>>>>> br2
 		EB2BE4F6239524DB00FB933B /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2BE4F9239524DB00FB933B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -45,17 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
-		C37FCE8D2772714A006B5C90 /* Data Model */ = {
-			isa = PBXGroup;
-			children = (
-				C37FCE8B277270AE006B5C90 /* Item.swift */,
-			);
-			path = "Data Model";
-			sourceTree = "<group>";
-		};
-		C37FCE8E2772716D006B5C90 /* Views */ = {
-=======
 		C3A5C0D8278F17ED00F93971 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +46,6 @@
 			sourceTree = "<group>";
 		};
 		C3A5C0D9278F180000F93971 /* Views */ = {
->>>>>>> br2
 			isa = PBXGroup;
 			children = (
 				EB2BE4FF239524DB00FB933B /* Main.storyboard */,
@@ -73,17 +53,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		C37FCE8F277271A4006B5C90 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		C37FCE90277271BA006B5C90 /* Supporting Files */ = {
-=======
 		C3A5C0DA278F181100F93971 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,17 +62,12 @@
 			sourceTree = "<group>";
 		};
 		C3A5C0DB278F186400F93971 /* Supportinig Files */ = {
->>>>>>> br2
 			isa = PBXGroup;
 			children = (
 				EB2BE502239524DC00FB933B /* Assets.xcassets */,
 				EB2BE504239524DC00FB933B /* LaunchScreen.storyboard */,
 			);
-<<<<<<< HEAD
-			path = "Supporting Files";
-=======
 			path = "Supportinig Files";
->>>>>>> br2
 			sourceTree = "<group>";
 		};
 		EB2BE4ED239524DB00FB933B = {
@@ -126,17 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				EB2BE4F9239524DB00FB933B /* AppDelegate.swift */,
-<<<<<<< HEAD
-				C37FCE8F277271A4006B5C90 /* Controllers */,
-				C37FCE8E2772716D006B5C90 /* Views */,
-				C37FCE8D2772714A006B5C90 /* Data Model */,
-				C37FCE90277271BA006B5C90 /* Supporting Files */,
-=======
 				C3A5C0DA278F181100F93971 /* Data Model */,
 				C3A5C0D9278F180000F93971 /* Views */,
 				C3A5C0D8278F17ED00F93971 /* Controllers */,
 				C3A5C0DB278F186400F93971 /* Supportinig Files */,
->>>>>>> br2
 				EB2BE507239524DC00FB933B /* Info.plist */,
 			);
 			path = Todoey;
@@ -214,11 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */,
-<<<<<<< HEAD
-				C37FCE8C277270AE006B5C90 /* Item.swift in Sources */,
-=======
 				C3A5C0D7278EF08100F93971 /* Item.swift in Sources */,
->>>>>>> br2
 				EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
