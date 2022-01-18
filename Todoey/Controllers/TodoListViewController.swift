@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Todoey
-//
-//  Created by Philipp Muellauer on 02/12/2019.
-//  Copyright © 2019 App Brewery. All rights reserved.
-//
 
 import UIKit
 
@@ -14,40 +7,19 @@ class TodoListViewController: UITableViewController {
     
     //Path to data folder and add file Item.plist
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
-   
+    
     
     //creating UserDefaults
     let defaults = UserDefaults.standard
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(dataFilePath)
-        
-        // not working user defaults because itemArray is collection
-        // NSUserDefaults not support collection
-        // load UserDefaults
-        //if let item = defaults.array(forKey: "TodoListArray") as? [String] {
-        //      itemArray = item
-        // }
-        // if as? [String] - crash protection
-        
-        
-        //  //Use for add data to itemArray until we dont created func lodItem
-        //let newItem1 = Item()
-        //newItem1.title = "Find Mike"
-        //itemArray.append(newItem1)
-        //
-        //let newItem2 = Item()
-        //newItem2.title = "Buy Eggos"
-        //itemArray.append(newItem2)
-        //
-        //let newItem3 = Item()
-        //newItem3.title = "Destroy Demogorgon"
-        //itemArray.append(newItem3)
+        //print(dataFilePath)
         
         loadItems()
     }
+    
     
     //MARK - Tableview Datasource Methods
     
@@ -63,12 +35,6 @@ class TodoListViewController: UITableViewController {
         
         cell.textLabel?.text = item.title
         
-//        if item.done == true {
-//            cell.accessoryType = .checkmark
-//        } else {
-//            cell.accessoryType = .none
-//        }
-        
         cell.accessoryType = item.done ? .checkmark : .none //ternary operator replaces if else;
         
         return cell
@@ -78,60 +44,42 @@ class TodoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // Data model are not used
-        //if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
-        //    tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        //} else {
-        //    tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        //}
-        
-        //see the refactor code below after the comments
-        //        if itemArray[indexPath.row].done == false {
-        //            itemArray[indexPath.row].done = true
-        //        } else {
-        //            itemArray[indexPath.row].done = false
-        //        }
-        
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
         
         saveItems()
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
     //MARK - Add New Item
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on out UIAlert
             
-            var textField = UITextField()
+            let newItem = Item()
             
-            let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+            newItem.title = textField.text!
             
-            let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-                //what will happen once the user clicks the Add Item button on out UIAlert
-                
-                let newItem = Item()
-                
-                newItem.title = textField.text!
-                
-                self.itemArray.append(newItem)
-                
-                //NotWork not working user defaults because itemArray is collection
-                //Save to UserDefaults
-                //self.defaults.set(self.itemArray, forKey: "TodoListArray")
-                
-                self.saveItems()
-            }
+            self.itemArray.append(newItem)
             
-            alert.addTextField { (alertTextField) in
-                alertTextField.placeholder = "Create new item"
-                textField = alertTextField
-            }
-            
-            alert.addAction(action)
-            
-            present(alert, animated: true, completion: nil)
-            
+            self.saveItems()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        
     }
     
     //MARK - Model Manupulation Methods
@@ -157,7 +105,7 @@ class TodoListViewController: UITableViewController {
             let decoder = PropertyListDecoder()
             
             do {
-            itemArray = try decoder.decode([Item].self, from: data)
+                itemArray = try decoder.decode([Item].self, from: data)
             } catch {
                 print("Error decoder item array, \(error)")
             }
